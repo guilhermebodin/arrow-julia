@@ -101,10 +101,10 @@ It's also possible to automatically close the Writer using a do-block:
 
 ```julia
 julia> open(Arrow.Writer, tempname()) do writer
-           partition1 = (col1 = [1, 2], col2 = ["A", "B"])
-           Arrow.write(writer, partition1)
-           partition2 = (col1 = [3, 4], col2 = ["C", "D"])
-           Arrow.write(writer, partition1)
+            partition1 = (col1 = [1, 2], col2 = ["A", "B"])
+            Arrow.write(writer, partition1)
+            partition2 = (col1 = [3, 4], col2 = ["C", "D"])
+            Arrow.write(writer, partition2)
        end
 ```
 """
